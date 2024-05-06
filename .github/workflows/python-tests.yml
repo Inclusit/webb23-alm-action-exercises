@@ -6,7 +6,7 @@ on:
      - python-tests
 
 jobs: 
-  run-tests:
+  run-test:
     runs-on: ubuntu-latest
 
     steps:
