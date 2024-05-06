@@ -1,15 +1,22 @@
-name: Python Hello World
+name: Pythin Hello World
 
-on:
+on: 
   push:
     branches:
       - python-hello-world
-
+    
 jobs:
-  python-hello-world:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
+  Python-Hello-World:
+    runs-on: windows-latest
+    steps: 
+      - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Run Python script
-        run: python hello.py
+
+      - name: Set up Python
+      uses: actions/setup-python@v2
+        with: 
+          python-version: '3.x'
+
+        - name: python hello world
+          run: python hello.py
+
