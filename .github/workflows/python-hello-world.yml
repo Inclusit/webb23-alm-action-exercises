@@ -6,8 +6,9 @@ on:
       - python-hello-world
     
 jobs:
-  Python-Hello-World:
-    runs-on: windows-latest
+  python-hello-world:
+    runs-on: ubuntu-latest
+
     steps: 
       - name: Checkout repository
         uses: actions/checkout@v2
