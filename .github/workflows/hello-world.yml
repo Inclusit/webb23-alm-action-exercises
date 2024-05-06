@@ -3,10 +3,6 @@ name: Hello World
 on: push
 job: hello-world
     runs-on: ubuntu-latest
-
     steps:
-    - name: Hello World
-      run: echo 'Hello World'
-
-
-# Path: .github/workflows/hello-world.yml
+      - name: Hello World
+        run: echo 'Hello World'
