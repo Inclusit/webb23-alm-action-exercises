@@ -3,7 +3,7 @@ name: Pythin Hello World
 on: 
   push:
     branches:
-      - python-hello-world
+      "*"
     
 jobs:
   python-hello-world:
@@ -14,10 +14,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up Python
-      uses: actions/setup-python@v2
-        with: 
+        uses: actions/setup-python@v2
+        with:
           python-version: '3.x'
 
-        - name: python hello world
-          run: python hello.py
+      - name: run hello.py
+        run: python hello.py
+
+      
+
+      
 
