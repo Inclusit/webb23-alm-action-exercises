@@ -1,21 +1,29 @@
-name: Run Tests
+name: Run tests
 
-on:
+on: 
   push:
     branches:
-      - python-tests
+     - main
 
-jobs:
-  run-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      - name: Run tests
-        run: pytest
+     jobs: 
+        run-tests:
+
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Checkout repo
+            uses: actions/checkout@v2
+
+          - name: Set up Python
+            uses: actions/setup-python@v2
+            with:
+              python-version: '3.x'
+
+          - name: install dependencies
+            run: |
+              pip install -r requirements.txt
+
+          - name: run python tests
+            run: |
+              python -m pytest tests/
+            
