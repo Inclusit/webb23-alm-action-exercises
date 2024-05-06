@@ -1,13 +1,12 @@
 name: Hello World
 
-on:
-  push:
-    branches:
-      - hello-world
-
-jobs:
-  hello-world:
+on: push
+job: hello-world
     runs-on: ubuntu-latest
+
     steps:
-      - name: Say Hello
-        run: echo "Hello, World!"
+    - name: Hello World
+      run: echo 'Hello World'
+
+
+# Path: .github/workflows/hello-world.yml
